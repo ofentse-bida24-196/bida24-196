@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | SageMuscles Gym Store</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+ <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo"> <img src="images/llg.png" alt="My Logo"><a href="index.html"></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<body>
+    <h1>We'd realy Love Your Feedback!</h1>
+    <p>Please share your thoughts by filling the form below.</p>
+
+    <form action="/submit-feedback" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="rating">Rate your experience.</label>
+        <select id="rating" name="rating" required>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts here..." required></textarea>
+
+        <label for="recommendation">Would you recommend us?</label>
+        <input type="radio" id="yes" name="recommendation" value="yes" required>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="recommendation" value="no">
+        <label for="no">No</label>
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <footer>
+         <div class="container">
+            <p>&copy; 2025 SageMuscles Gym Store. All rights reserved.</p>
+            <p>Follow us:</p>
+  <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+  <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

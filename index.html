@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | SageMuscles Gym Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo"> <img src="images/llg.png" alt="My Logo"><a href="index.html"></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to SageMuscles!</h2>
+            <p>Your one-stop shop for gym equipment and memberships. Let's get fit together!</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Equipment -->
+    <section class="featured">
+        <div class="container">
+            <h2>Featured Equipment</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="images/dumbellsets.jpg" alt="Dumbbell">
+                    <h3>Dumbbells Set</h3>
+                    <p> <strike>P700</strike> <strong>P480</strong></p>
+                     <button class="btn add-to-cart" data-id="1" data-name="15KG Dumbell Set" data-price="300">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/electrictreadmill.jpg" alt="Treadmill">
+                    <h3>Electric Treadmill</h3>
+                    <p> <strike>P5200</strike> <strong>P4800</strong></p>
+                     <button class="btn add-to-cart" data-id="1" data-name="Electric Treadmill" data-price="300">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/yogamat1.jpg" alt="Yoga Mat">
+                    <h3>Yoga Mat</h3>
+                  <p> <strike>P700</strike> <strong>P480</strong></p>
+                   <button class="btn add-to-cart" data-id="1" data-name="Yoga Mat" data-price="300">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    // Create an empty cart
+    const cart = [];
+
+    // Listen for clicks on 'Add to Cart' buttons
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.add-to-cart');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.getAttribute('data-id');
+                const productName = button.getAttribute('data-name');
+                const productPrice = parseFloat(button.getAttribute('data-price'));
+
+                // Create product object
+                const product = {
+                    id: productId,
+                    name: productName,
+                    price: productPrice
+                };
+
+                // Add product to cart
+                cart.push(product);
+
+                // Optionally display feedback
+                alert(`${productName} added to cart!`);
+
+                // Log current cart contents (for testing)
+                console.log(cart);
+            });
+        });
+    });
+</script>
+
+    <!-- Footer -->
+    <footer>
+            <p>&copy; 2025 SageMuscles Gym Store. All rights reserved.</p>
+             <p>Follow us:</p>
+  <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+  <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </footer>
+</body>
+</html>
